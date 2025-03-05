@@ -11,8 +11,8 @@
 liteBangumiAPI有两个全局变量，必须在调用前设置。填写全局变量如下：
 
 ``` go
-bgmAPI.Token = "YOUR_ACCESS_TOKEN"
-bgmAPI.UserAgent = "YOUR User-Agent"
+lite_bangumi_api.Token = "YOUR_ACCESS_TOKEN"
+lite_bangumi_api.UserAgent = "YOUR User-Agent"
 ```
 
 说明：
