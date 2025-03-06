@@ -23,6 +23,8 @@ lite_bangumi_api.UserAgent = "YOUR User-Agent"
 
 ## 支持的API：
 
+参数访问：https://bangumi.github.io/api/#/
+
 ```
 /calendar
 /v0/search/subjects
