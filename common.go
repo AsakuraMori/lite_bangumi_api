@@ -16,7 +16,7 @@ import (
 	"strconv"
 )
 
-/**
+/*
  * @brief 定义Token和UserAgent
  */
 var (
@@ -25,13 +25,22 @@ var (
 )
 
 /*
-*
+getJsonDataFromURL
+
   - @brief 从URL获取Json数据
-  - @param 【method】：方法
+
+  - @param
+
+    【method】：方法
+
     【url】：地址
+
     【requestBody】：请求体
+
     【client】：http.Client对象
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func getJsonDataFromURL(method, url, requestBody string, client *http.Client) ([]byte, error) {
@@ -73,13 +82,20 @@ func getJsonDataFromURL(method, url, requestBody string, client *http.Client) ([
 }
 
 /*
-*
+getBoolDataFromURL
+
   - @brief 从URL获取Bool数据
+
   - @param 【method】：方法
+
     【url】：地址
+
     【requestBody】：请求体
+
     【client】：http.Client对象
+
   - @return 返回一个bool和一个err。
+
   - @retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func getBoolDataFromURL(method, url, requestBody string, client *http.Client) error {

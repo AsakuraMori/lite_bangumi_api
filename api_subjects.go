@@ -15,14 +15,20 @@ import (
 )
 
 /*
-*
+SearchSubjectsByName
 
   - @brief 通过字符串搜索条目。
+
     API：/v0/search/subjects
 
-  - @param 【limit】：当前页最大数量
+  - @param
+
+    【limit】：当前页最大数量
+
     【offset】：起始位置
+
     【requestBody】：请求体，结构如下：
+
     {
     "keyword": "string",
     "sort": "rank",
@@ -32,6 +38,7 @@ import (
     ]
     }
     }
+
     【client】：http.Client对象
 
   - @return 返回一个[]byte和一个err。
@@ -55,12 +62,20 @@ func SearchSubjectsByName(limit, offset string, requestBody string, client *http
 }
 
 /*
-*
+SearchSubjectsById
+
   - @brief 通过搜索条目ID名获取ID信息。
+
     API：/v0/subjects/{subject_id}
-  - @param 【subID】：条目ID。
+
+  - @param
+
+    【subID】：条目ID。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchSubjectsById(subID string, client *http.Client) ([]byte, error) {
@@ -74,16 +89,26 @@ func SearchSubjectsById(subID string, client *http.Client) ([]byte, error) {
 }
 
 /*
-*
+SearchAllSubjectsByName
+
   - @brief 通过关键字搜索所有信息。
+
     API：/search/subject/{keywords}
+
   - @param 【keyWord】：关键字。
+
     【typeName】：条目类型（只能是以下字符串：书籍、动漫、音乐、游戏、三次元。如果typeName不满足以上字符串，则将全局搜索）
+
     【responseGroup】：返回数据大小（只能指定为small、medium、large）
+
     【start】：开始的条目
+
     【nmaxResults】：每页最大数量
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchAllSubjectsByName(keyWord, typeName, responseGroup, start, nmaxResults string, client *http.Client) ([]byte, error) {
@@ -120,11 +145,18 @@ func SearchAllSubjectsByName(keyWord, typeName, responseGroup, start, nmaxResult
 }
 
 /*
-*
+GetCalender
+
   - @brief 获取每日放送。
+
     API：/calendar
-  - @param 【client】：http.Client对象。
+
+  - @param
+
+    【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func GetCalender(client *http.Client) ([]byte, error) {

@@ -15,11 +15,17 @@ import (
 )
 
 /*
-*
+SetIndices
+
   - @brief 新建目录。
+
     API：/v0/persons/{person_id}
-  - @param【client】：http.Client对象。
+
+  - @param
+    【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SetIndices(client *http.Client) ([]byte, error) {
@@ -34,12 +40,20 @@ func SetIndices(client *http.Client) ([]byte, error) {
 }
 
 /*
-*
+GetIndicesByID
+
   - @brief 通过搜索目录ID名获取ID信息。
+
     API：/v0/indices/{index_id}
-  - @param 【idxID】：目录ID。
+
+  - @param
+
+    【idxID】：目录ID。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func GetIndicesByID(idxID string, client *http.Client) ([]byte, error) {
@@ -54,17 +68,27 @@ func GetIndicesByID(idxID string, client *http.Client) ([]byte, error) {
 }
 
 /*
-*
+EditIndicesInformationByIDAndRequestBody
+
   - @brief 通过目录ID修改目录信息。
+
     API：/v0/indices/{index_id}
-  - @param 【idxID】：目录ID。
+
+  - @param
+
+    【idxID】：目录ID。
+
     【requestBody】：请求体，格式如下：
+
     {
     "title": "string",
     "description": "string"
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func EditIndicesInformationByIDAndRequestBody(idxID, requestBody string, client *http.Client) ([]byte, error) {
@@ -79,15 +103,22 @@ func EditIndicesInformationByIDAndRequestBody(idxID, requestBody string, client 
 }
 
 /*
-*
+GetIndicesSubjectByID
 
   - @brief 通过目录ID获取内部条目。
+
     API：/v0/indices/{index_id}/subjects
 
-  - @param 【idxID】：目录ID。
+  - @param
+
+    【idxID】：目录ID。
+
     【typeName】：类型名（只能是以下字符串：书籍、动漫、音乐、游戏、三次元。如果typeName不满足以上字符串，则将全局搜索）
+
     【limit】：当前页面显示条目最大数量。
+
     【offset】：开始的条目位置。
+
     【client】：http.Client对象。
 
   - @return 返回一个bool和一个err。
@@ -125,18 +156,28 @@ func GetIndicesSubjectByID(idxID, typeName, limit, offset string, client *http.C
 }
 
 /*
-*
+AddSubjectsToIndicesByIDAndRequestBody
+
   - @brief 将条目添加到目录。
+
     API：/v0/indices/{index_id}/subjects
-  - @param 【idxID】：目录ID。
+
+  - @param
+
+    【idxID】：目录ID。
+
     【requestBody】：请求体，格式如下：
+
     {
     "subject_id": 0,
     "sort": 0,
     "comment": "string"
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func AddSubjectsToIndicesByIDAndRequestBody(idxID, requestBody string, client *http.Client) (bool, error) {
@@ -150,18 +191,29 @@ func AddSubjectsToIndicesByIDAndRequestBody(idxID, requestBody string, client *h
 }
 
 /*
-*
+EditSubjectsInformationInIndiesByIDAndRequestBody
+
   - @brief 编辑在目录中的条目，如果不存在，则创建条目。
+
     API：/v0/indices/{index_id}/subjects/{subject_id}
-  - @param 【idxID】：目录ID。
+
+  - @param
+
+    【idxID】：目录ID。
+
     【subID】：条目ID
+
     【requestBody】：请求体，格式如下：
+
     {
     "sort": 0,
     "comment": "string"
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func EditSubjectsInformationInIndiesByIDAndRequestBody(idxID, subID, requestBody string, client *http.Client) (bool, error) {
@@ -175,13 +227,18 @@ func EditSubjectsInformationInIndiesByIDAndRequestBody(idxID, subID, requestBody
 }
 
 /*
-*
+DeleteSubjectsFromIndicesByID
 
   - @brief 从目录中删除条目。
+
     API：/v0/indices/{index_id}/subjects/{subject_id}
 
-  - @param 【idxID】：目录ID。
+  - @param
+
+    【idxID】：目录ID。
+
     【subID】：条目ID
+
     【client】：http.Client对象。
 
   - @return 返回一个bool和一个err。
@@ -199,12 +256,16 @@ func DeleteSubjectsFromIndicesByID(idxID, subID string, client *http.Client) (bo
 }
 
 /*
-*
+CollectIndicesForCurrentUserByID
 
   - @brief 收藏目录到当前用户。
+
     API：/v0/indices/{index_id}/collect
 
-  - @param 【idxID】：目录ID。
+  - @param
+
+    【idxID】：目录ID。
+
     【client】：http.Client对象。
 
   - @return 返回一个bool和一个err。
@@ -222,12 +283,16 @@ func CollectIndicesForCurrentUserByID(idxID string, client *http.Client) (bool, 
 }
 
 /*
-*
+DeleteCollectIndicesForCurrentUserByID
 
   - @brief 删除当前用户里指定的目录。
+
     API：/v0/indices/{index_id}/collect
 
-  - @param 【idxID】：目录ID。
+  - @param
+
+    【idxID】：目录ID。
+
     【client】：http.Client对象。
 
   - @return 返回一个bool和一个err。

@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:6060/pkg/lite_bangumi_api/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>lite_bangumi_api - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="./index_files/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="./index_files/jquery.js.下载" defer=""></script>
+
+
+
+<script>var goVersion = "go1.20.14";</script>
+<script src="./index_files/godocs.js.下载" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="http://localhost:6060/pkg/lite_bangumi_api/#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+
+</div></div>
+
+
+
+<div id="page" class="wide" tabindex="-1" style="outline: 0px;">
+<div class="container">
+
+
+  <h1>
+    Package lite_bangumi_api
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "lite_bangumi_api"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggle">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#AddOrEditCollectionsSubjectsInUsersByID">func AddOrEditCollectionsSubjectsInUsersByID(subID, requestBody string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#AddSubjectsToIndicesByIDAndRequestBody">func AddSubjectsToIndicesByIDAndRequestBody(idxID, requestBody string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#CollectIndicesForCurrentUserByID">func CollectIndicesForCurrentUserByID(idxID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteCollectCharactersById">func DeleteCollectCharactersById(chrID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteCollectIndicesForCurrentUserByID">func DeleteCollectIndicesForCurrentUserByID(idxID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteCollectPersonsById">func DeleteCollectPersonsById(perID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteSubjectsFromIndicesByID">func DeleteSubjectsFromIndicesByID(idxID, subID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#EditCollectionsSubjectsInUsersByID">func EditCollectionsSubjectsInUsersByID(subID, requestBody string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#EditIndicesInformationByIDAndRequestBody">func EditIndicesInformationByIDAndRequestBody(idxID, requestBody string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#EditSubjectsInformationInIndiesByIDAndRequestBody">func EditSubjectsInformationInIndiesByIDAndRequestBody(idxID, subID, requestBody string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#GetCalender">func GetCalender(client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#GetCollectionsSubjectsEpisodesInfo">func GetCollectionsSubjectsEpisodesInfo(subID, requestBody string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#GetIndicesByID">func GetIndicesByID(idxID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#GetIndicesSubjectByID">func GetIndicesSubjectByID(idxID, typeName, limit, offset string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#GetMe">func GetMe(client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchAllSubjectsByName">func SearchAllSubjectsByName(keyWord, typeName, responseGroup, start, nmaxResults string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersById">func SearchCharactersById(chrID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersByName">func SearchCharactersByName(limit, offset string, requestBody string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersCollectionsByUserName">func SearchCharactersCollectionsByUserName(userName string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersCollectionsByUserNameAndID">func SearchCharactersCollectionsByUserNameAndID(userName, chrID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersRevisionsById">func SearchCharactersRevisionsById(chrID, limit, offset string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersRevisionsByRevisionsId">func SearchCharactersRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCollectionsByID">func SearchCollectionsByID(userName, subID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCollectionsByUserName">func SearchCollectionsByUserName(userName, subjectTypeName, typeName, limit, offset string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCollectionsEpisodesInfo">func SearchCollectionsEpisodesInfo(epiID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesByEpisodesId">func SearchEpisodesByEpisodesId(epiID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesByEpisodesName">func SearchEpisodesByEpisodesName(sbjID, typeName, limit, offset string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesRevisionsById">func SearchEpisodesRevisionsById(epiID, limit, offset string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesRevisionsByRevisionsId">func SearchEpisodesRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsById">func SearchPersonsById(perID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsByName">func SearchPersonsByName(limit, offset string, requestBody string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsCollectionsByUserName">func SearchPersonsCollectionsByUserName(userName string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsCollectionsByUserNameAndID">func SearchPersonsCollectionsByUserNameAndID(userName, perID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsRevisionsById">func SearchPersonsRevisionsById(perID, limit, offset string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsRevisionsByRevisionsId">func SearchPersonsRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsById">func SearchSubjectsById(subID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsByName">func SearchSubjectsByName(limit, offset string, requestBody string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsRevisionsById">func SearchSubjectsRevisionsById(subID, limit, offset string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsRevisionsByRevisionsId">func SearchSubjectsRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchUserNameByName">func SearchUserNameByName(userName string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SearchUsersCollectionsEpisodesBySubjectsID">func SearchUsersCollectionsEpisodesBySubjectsID(subID, offset, limit, episodesType string, client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SetCollectCharactersById">func SetCollectCharactersById(chrID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SetCollectPersonsById">func SetCollectPersonsById(perID string, client *http.Client) (bool, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#SetIndices">func SetIndices(client *http.Client) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/lite_bangumi_api/#UpdateCollectionEpisodesInfo">func UpdateCollectionEpisodesInfo(epiID, requestBody string, client *http.Client) (bool, error)</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables <a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#pkg-variables">¶</a></h2>
+			
+				<p>* @brief 定义Token和UserAgent
+
+				</p><pre>var (
+    <span id="Token">Token</span>     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    <span id="UserAgent">UserAgent</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="AddOrEditCollectionsSubjectsInUsersByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=3567:3673#L141">AddOrEditCollectionsSubjectsInUsersByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#AddOrEditCollectionsSubjectsInUsersByID">¶</a>
+				
+				
+			</h2>
+			<pre>func AddOrEditCollectionsSubjectsInUsersByID(subID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>AddOrEditCollectionsSubjectsInUsersByID
+</p><ul>
+<li><p>@brief 修改条目收藏状态, 如果不存在则创建，如果存在则修改。
+由于直接修改剧集条目的完成度可能会引起意料之外效果，只能用于修改书籍类条目的完成度。
+方法的所有请求体字段均可选。
+</p><p>API：/v0/users/-/collections/{subject_id}
+</p></li><li><p>@param
+</p><p>【subID】：条目ID。
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"type": 3,
+"rate": 10,
+"ep_status": 0,
+"vol_status": 0,
+"comment": "string",
+"private": true,
+"tags": [
+"string"
+]
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AddSubjectsToIndicesByIDAndRequestBody">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=3890:3995#L173">AddSubjectsToIndicesByIDAndRequestBody</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#AddSubjectsToIndicesByIDAndRequestBody">¶</a>
+				
+				
+			</h2>
+			<pre>func AddSubjectsToIndicesByIDAndRequestBody(idxID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>AddSubjectsToIndicesByIDAndRequestBody
+</p><ul>
+<li><p>@brief 将条目添加到目录。
+</p><p>API：/v0/indices/{index_id}/subjects
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"subject_id": 0,
+"sort": 0,
+"comment": "string"
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CollectIndicesForCurrentUserByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=6093:6179#L265">CollectIndicesForCurrentUserByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#CollectIndicesForCurrentUserByID">¶</a>
+				
+				
+			</h2>
+			<pre>func CollectIndicesForCurrentUserByID(idxID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>CollectIndicesForCurrentUserByID
+</p><ul>
+<li><p>@brief 收藏目录到当前用户。
+</p><p>API：/v0/indices/{index_id}/collect
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteCollectCharactersById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_characters.go?s=2808:2889#L123">DeleteCollectCharactersById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteCollectCharactersById">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteCollectCharactersById(chrID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>DeleteCollectCharactersById
+</p><ul>
+<li><p>@brief 为当前用户取消收藏角色。
+</p><p>API：/v0/characters/{character_id}/collect
+</p></li><li><p>@param
+</p><p>【chrID】：角色ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteCollectIndicesForCurrentUserByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=6730:6822#L292">DeleteCollectIndicesForCurrentUserByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteCollectIndicesForCurrentUserByID">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteCollectIndicesForCurrentUserByID(idxID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>DeleteCollectIndicesForCurrentUserByID
+</p><ul>
+<li><p>@brief 删除当前用户里指定的目录。
+</p><p>API：/v0/indices/{index_id}/collect
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteCollectPersonsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_persons.go?s=2786:2864#L127">DeleteCollectPersonsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteCollectPersonsById">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteCollectPersonsById(perID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>DeleteCollectPersonsById
+</p><ul>
+<li><p>@brief 为当前用户取消收藏人物。
+</p><p>API：/v0/persons/{person_id}/collect
+</p></li><li><p>@param
+</p><p>【perID】：人物ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteSubjectsFromIndicesByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=5454:5544#L238">DeleteSubjectsFromIndicesByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#DeleteSubjectsFromIndicesByID">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteSubjectsFromIndicesByID(idxID, subID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>DeleteSubjectsFromIndicesByID
+</p><ul>
+<li><p>@brief 从目录中删除条目。
+</p><p>API：/v0/indices/{index_id}/subjects/{subject_id}
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【subID】：条目ID
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="EditCollectionsSubjectsInUsersByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=4627:4728#L184">EditCollectionsSubjectsInUsersByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#EditCollectionsSubjectsInUsersByID">¶</a>
+				
+				
+			</h2>
+			<pre>func EditCollectionsSubjectsInUsersByID(subID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>EditCollectionsSubjectsInUsersByID
+</p><ul>
+<li><p>@brief 修改条目收藏状态。
+由于直接修改剧集条目的完成度可能会引起意料之外效果，只能用于修改书籍类条目的完成度。
+PATCH 方法的所有请求体字段均可选。
+</p><p>API：/v0/users/-/collections/{subject_id}
+</p></li><li><p>@param
+</p><p>【subID】：条目ID。
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"type": 3,
+"rate": 10,
+"ep_status": 0,
+"vol_status": 0,
+"comment": "string",
+"private": true,
+"tags": [
+"string"
+]
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="EditIndicesInformationByIDAndRequestBody">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=1785:1894#L84">EditIndicesInformationByIDAndRequestBody</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#EditIndicesInformationByIDAndRequestBody">¶</a>
+				
+				
+			</h2>
+			<pre>func EditIndicesInformationByIDAndRequestBody(idxID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>EditIndicesInformationByIDAndRequestBody
+</p><ul>
+<li><p>@brief 通过目录ID修改目录信息。
+</p><p>API：/v0/indices/{index_id}
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"title": "string",
+"description": "string"
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="EditSubjectsInformationInIndiesByIDAndRequestBody">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=4740:4863#L209">EditSubjectsInformationInIndiesByIDAndRequestBody</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#EditSubjectsInformationInIndiesByIDAndRequestBody">¶</a>
+				
+				
+			</h2>
+			<pre>func EditSubjectsInformationInIndiesByIDAndRequestBody(idxID, subID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>EditSubjectsInformationInIndiesByIDAndRequestBody
+</p><ul>
+<li><p>@brief 编辑在目录中的条目，如果不存在，则创建条目。
+</p><p>API：/v0/indices/{index_id}/subjects/{subject_id}
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【subID】：条目ID
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"sort": 0,
+"comment": "string"
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetCalender">func <a href="http://localhost:6060/src/lite_bangumi_api/api_subjects.go?s=3588:3641#L152">GetCalender</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#GetCalender">¶</a>
+				
+				
+			</h2>
+			<pre>func GetCalender(client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>GetCalender
+</p><ul>
+<li><p>@brief 获取每日放送。
+</p><p>API：/calendar
+</p></li><li><p>@param
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetCollectionsSubjectsEpisodesInfo">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=6915:7016#L276">GetCollectionsSubjectsEpisodesInfo</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#GetCollectionsSubjectsEpisodesInfo">¶</a>
+				
+				
+			</h2>
+			<pre>func GetCollectionsSubjectsEpisodesInfo(subID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>GetCollectionsSubjectsEpisodesInfo
+</p><ul>
+<li><p>@brief 章节收藏信息。同时会重新计算条目的完成度。
+</p><p>API：/v0/users/-/collections/{subject_id}/episodes
+</p></li><li><p>@param 【subID】：条目ID。
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"episode_id": [
+1,
+2,
+8
+],
+"type": 2
+]
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetIndicesByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=1026:1096#L49">GetIndicesByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#GetIndicesByID">¶</a>
+				
+				
+			</h2>
+			<pre>func GetIndicesByID(idxID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>GetIndicesByID
+</p><ul>
+<li><p>@brief 通过搜索目录ID名获取ID信息。
+</p><p>API：/v0/indices/{index_id}
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetIndicesSubjectByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=2739:2839#L118">GetIndicesSubjectByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#GetIndicesSubjectByID">¶</a>
+				
+				
+			</h2>
+			<pre>func GetIndicesSubjectByID(idxID, typeName, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>GetIndicesSubjectByID
+</p><ul>
+<li><p>@brief 通过目录ID获取内部条目。
+</p><p>API：/v0/indices/{index_id}/subjects
+</p></li><li><p>@param
+</p><p>【idxID】：目录ID。
+</p><p>【typeName】：类型名（只能是以下字符串：书籍、动漫、音乐、游戏、三次元。如果typeName不满足以上字符串，则将全局搜索）
+</p><p>【limit】：当前页面显示条目最大数量。
+</p><p>【offset】：开始的条目位置。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetMe">func <a href="http://localhost:6060/src/lite_bangumi_api/api_user.go?s=1087:1134#L49">GetMe</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#GetMe">¶</a>
+				
+				
+			</h2>
+			<pre>func GetMe(client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>GetMe
+</p><ul>
+<li><p>@brief 获取当前用户信息。
+</p><p>API：/v0/me
+</p></li><li><p>@param
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchAllSubjectsByName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_subjects.go?s=2511:2637#L104">SearchAllSubjectsByName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchAllSubjectsByName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchAllSubjectsByName(keyWord, typeName, responseGroup, start, nmaxResults <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchAllSubjectsByName
+</p><ul>
+<li><p>@brief 通过关键字搜索所有信息。
+</p><p>API：/search/subject/{keywords}
+</p></li><li><p>@param 【keyWord】：关键字。
+</p><p>【typeName】：条目类型（只能是以下字符串：书籍、动漫、音乐、游戏、三次元。如果typeName不满足以上字符串，则将全局搜索）
+</p><p>【responseGroup】：返回数据大小（只能指定为small、medium、large）
+</p><p>【start】：开始的条目
+</p><p>【nmaxResults】：每页最大数量
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCharactersById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_characters.go?s=1540:1616#L68">SearchCharactersById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCharactersById(chrID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCharactersById
+</p><ul>
+<li><p>@brief 通过搜索角色ID名获取ID信息。
+</p><p>API：/v0/characters/{character_id}
+</p></li><li><p>@param
+</p><p>【chrID】：角色ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCharactersByName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_characters.go?s=718:824#L35">SearchCharactersByName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersByName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCharactersByName(limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCharactersByName
+</p><ul>
+<li><p>@brief 通过搜索角色名获取任务信息。
+</p><p>API：/v0/search/characters
+</p></li><li><p>@param
+</p><p>【limit】：当前页最大数量
+</p><p>【offset】：起始位置
+</p><p>【requestBody】：请求体，结构如下：
+</p><p>{
+"keyword": "string",
+"filter": {
+"nsfw": true
+}
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCharactersCollectionsByUserName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=8990:9086#L358">SearchCharactersCollectionsByUserName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersCollectionsByUserName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCharactersCollectionsByUserName(userName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCharactersCollectionsByUserName
+</p><ul>
+<li><p>@brief 获取用户角色收藏列表。
+</p><p>API：/v0/users/{username}/collections/-/characters
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCharactersCollectionsByUserNameAndID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=9705:9813#L384">SearchCharactersCollectionsByUserNameAndID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersCollectionsByUserNameAndID">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCharactersCollectionsByUserNameAndID(userName, chrID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCharactersCollectionsByUserNameAndID
+</p><ul>
+<li><p>@brief 获取用户单个角色收藏信息。
+</p><p>API：/v0/users/{username}/collections/-/characters/{character_id}
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCharactersRevisionsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=2207:2307#L91">SearchCharactersRevisionsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersRevisionsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCharactersRevisionsById(chrID, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCharactersRevisionsById
+</p><ul>
+<li><p>@brief 获取角色ID的编辑历史。
+</p><p>API：/v0/revisions/characters
+</p></li><li><p>@param
+</p><p>【chrID】：角色ID
+</p><p>【limit】：当前页最大数
+</p><p>【offset】：起始位置
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCharactersRevisionsByRevisionsId">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=3096:3190#L123">SearchCharactersRevisionsByRevisionsId</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCharactersRevisionsByRevisionsId">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCharactersRevisionsByRevisionsId(revID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCharactersRevisionsByRevisionsId
+</p><ul>
+<li><p>@brief 获取角色编辑历史ID内详细信息。
+</p><p>API：/v0/revisions/characters/{revision_id}
+</p></li><li><p>@param
+</p><p>【revID】：历史ID
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCollectionsByID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=2465:2552#L99">SearchCollectionsByID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCollectionsByID">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCollectionsByID(userName, subID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCollectionsByID
+</p><ul>
+<li><p>@brief 获取对应用户的收藏，查看私有收藏需要 access token。
+</p><p>API：/v0/users/{username}/collections/{subject_id}
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【subID】：条目类ID
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCollectionsByUserName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=998:1126#L33">SearchCollectionsByUserName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCollectionsByUserName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCollectionsByUserName(userName, subjectTypeName, typeName, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCollectionsByUserName
+</p><ul>
+<li><p>@brief 获取用户收藏。
+</p><p>API：/v0/users/{username}/collections
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【subjectTypeName】：条目类型（只能是以下字符串：书籍、动漫、音乐、游戏、三次元。如果不满足以上字符串，则会返回错误）
+</p><p>【typeName】：收藏类型（只能是以下字符串：想看、看过、在看、搁置、抛弃。如果不满足以上字符串，则将全局搜索）
+</p><p>【limit】：当前页面显示条目最大数量。
+</p><p>【offset】：开始的条目位置。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchCollectionsEpisodesInfo">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=7578:7663#L302">SearchCollectionsEpisodesInfo</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchCollectionsEpisodesInfo">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchCollectionsEpisodesInfo(epiID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchCollectionsEpisodesInfo
+</p><ul>
+<li><p>@brief 获取章节收藏信息。
+</p><p>API：/v0/users/-/collections/-/episodes/{episode_id}
+</p></li><li><p>@param
+</p><p>【epiID】：章节ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchEpisodesByEpisodesId">func <a href="http://localhost:6060/src/lite_bangumi_api/api_episodes.go?s=1978:2060#L84">SearchEpisodesByEpisodesId</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesByEpisodesId">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchEpisodesByEpisodesId(epiID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchEpisodesByEpisodesId
+</p><ul>
+<li><p>@brief 通过搜索章节ID名章节ID信息。
+</p><p>API：/v0/episodes/{episode_id}
+</p></li><li><p>@param
+</p><p>【epiID】：章节ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchEpisodesByEpisodesName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_episodes.go?s=814:923#L30">SearchEpisodesByEpisodesName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesByEpisodesName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchEpisodesByEpisodesName(sbjID, typeName, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchEpisodesByEpisodesName
+</p><ul>
+<li><p>@brief 通过搜索条目ID名获取章节信息。
+</p><p>API：/v0/episodes
+</p></li><li><p>@param
+</p><p>【sbjID】：条目ID。
+</p><p>【typeName】：类型（只能是以下类型：本篇、特别篇、OP、ED、预告/宣传/广告、MAD、其他。如果不是以上的字符串，则全局搜索）
+</p><p>【limit】：当前页面显示条目最大数量
+</p><p>【offset】：开始的条目位置
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchEpisodesRevisionsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=5433:5531#L219">SearchEpisodesRevisionsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesRevisionsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchEpisodesRevisionsById(epiID, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchEpisodesRevisionsById
+</p><ul>
+<li><p>@brief 获取章节ID的编辑历史。
+</p><p>API：/v0/revisions/episodes
+</p></li><li><p>@param
+</p><p>【epiID】：章节ID
+</p><p>【limit】：当前页最大数
+</p><p>【offset】：起始位置
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchEpisodesRevisionsByRevisionsId">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=6312:6404#L251">SearchEpisodesRevisionsByRevisionsId</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchEpisodesRevisionsByRevisionsId">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchEpisodesRevisionsByRevisionsId(revID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchEpisodesRevisionsByRevisionsId
+</p><ul>
+<li><p>@brief 获取章节编辑历史ID内详细信息。
+</p><p>API：/v0/revisions/episodes/{revision_id}
+</p></li><li><p>@param
+</p><p>【revID】：历史ID
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchPersonsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_persons.go?s=1547:1620#L71">SearchPersonsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchPersonsById(perID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchPersonsById
+</p><ul>
+<li><p>@brief 通过搜索人物ID名获取ID信息。
+</p><p>API：/v0/persons/{person_id}
+</p></li><li><p>@param
+</p><p>【perID】：人物ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchPersonsByName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_persons.go?s=740:843#L38">SearchPersonsByName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsByName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchPersonsByName(limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchPersonsByName
+</p><ul>
+<li><p>@brief 通过搜索人物名获取人物信息。
+</p><p>API：/v0/search/persons
+</p></li><li><p>@param
+</p><p>【limit】：当前页最大数量
+</p><p>【offset】：起始位置
+</p><p>【requestBody】：请求体，结构如下：
+</p><p>{
+"keyword": "string",
+"filter": {
+"career": [
+"artist",
+"director"
+]
+}
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchPersonsCollectionsByUserName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=10410:10503#L410">SearchPersonsCollectionsByUserName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsCollectionsByUserName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchPersonsCollectionsByUserName(userName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchPersonsCollectionsByUserName
+</p><ul>
+<li><p>@brief 获取用户人物收藏列表。
+</p><p>API：/v0/users/{username}/collections/-/persons
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchPersonsCollectionsByUserNameAndID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=11110:11215#L436">SearchPersonsCollectionsByUserNameAndID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsCollectionsByUserNameAndID">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchPersonsCollectionsByUserNameAndID(userName, perID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchPersonsCollectionsByUserNameAndID
+</p><ul>
+<li><p>@brief 获取用户单个人物收藏信息。
+</p><p>API：/v0/users/{username}/collections/-/persons/{person_id}
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchPersonsRevisionsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=605:702#L28">SearchPersonsRevisionsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsRevisionsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchPersonsRevisionsById(perID, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchPersonsRevisionsById
+</p><ul>
+<li><p>@brief 获取人物ID的编辑历史。
+</p><p>API：/v0/revisions/persons
+</p></li><li><p>@param
+</p><p>【perID】：人物ID
+</p><p>【limit】：当前页最大数
+</p><p>【offset】：起始位置
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchPersonsRevisionsByRevisionsId">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=1478:1569#L59">SearchPersonsRevisionsByRevisionsId</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchPersonsRevisionsByRevisionsId">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchPersonsRevisionsByRevisionsId(revID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchPersonsRevisionsByRevisionsId
+</p><ul>
+<li><p>@brief 获取人物编辑历史ID内详细信息。
+</p><p>API：/v0/revisions/persons/{revision_id}
+</p></li><li><p>@param
+</p><p>【revID】：历史ID
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchSubjectsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_subjects.go?s=1536:1610#L71">SearchSubjectsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchSubjectsById(subID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchSubjectsById
+</p><ul>
+<li><p>@brief 通过搜索条目ID名获取ID信息。
+</p><p>API：/v0/subjects/{subject_id}
+</p></li><li><p>@param
+</p><p>【subID】：条目ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchSubjectsByName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_subjects.go?s=724:828#L38">SearchSubjectsByName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsByName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchSubjectsByName(limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchSubjectsByName
+</p><ul>
+<li><p>@brief 通过字符串搜索条目。
+</p><p>API：/v0/search/subjects
+</p></li><li><p>@param
+</p><p>【limit】：当前页最大数量
+</p><p>【offset】：起始位置
+</p><p>【requestBody】：请求体，结构如下：
+</p><p>{
+"keyword": "string",
+"sort": "rank",
+"filter": {
+"type": [
+2
+]
+}
+}
+</p><p>【client】：http.Client对象
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchSubjectsRevisionsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=3827:3925#L155">SearchSubjectsRevisionsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsRevisionsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchSubjectsRevisionsById(subID, limit, offset <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchSubjectsRevisionsById
+</p><ul>
+<li><p>@brief 获取条目ID的编辑历史。
+</p><p>API：/v0/revisions/subjects
+</p></li><li><p>@param
+</p><p>【subID】：条目ID
+</p><p>【limit】：当前页最大数
+</p><p>【offset】：起始位置
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchSubjectsRevisionsByRevisionsId">func <a href="http://localhost:6060/src/lite_bangumi_api/api_revisions.go?s=4706:4798#L187">SearchSubjectsRevisionsByRevisionsId</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchSubjectsRevisionsByRevisionsId">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchSubjectsRevisionsByRevisionsId(revID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchSubjectsRevisionsByRevisionsId
+</p><ul>
+<li><p>@brief 获取条目编辑历史ID内详细信息。
+</p><p>API：/v0/revisions/subjects/{revision_id}
+</p></li><li><p>@param
+</p><p>【revID】：历史ID
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchUserNameByName">func <a href="http://localhost:6060/src/lite_bangumi_api/api_user.go?s=525:604#L23">SearchUserNameByName</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchUserNameByName">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchUserNameByName(userName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchUserNameByName
+</p><ul>
+<li><p>@brief 通过搜索用户名获取用户信息。
+</p><p>API：/v0/users/{username}
+</p></li><li><p>@param
+</p><p>【userName】：用户名。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SearchUsersCollectionsEpisodesBySubjectsID">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=5597:5724#L216">SearchUsersCollectionsEpisodesBySubjectsID</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SearchUsersCollectionsEpisodesBySubjectsID">¶</a>
+				
+				
+			</h2>
+			<pre>func SearchUsersCollectionsEpisodesBySubjectsID(subID, offset, limit, episodesType <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SearchUsersCollectionsEpisodesBySubjectsID
+</p><ul>
+<li><p>@brief 搜索章节收藏信息。
+</p><p>API：/v0/users/-/collections/{subject_id}/episodes
+</p></li><li><p>@param
+</p><p>【subID】：条目ID。
+</p><p>【limit】：当前页面显示条目最大数量。
+</p><p>【offset】：开始的条目位置。
+</p><p>【episodesType】：章节类型（只能是以下字符串：本篇、特别篇、OP、ED、预告/宣传/广告、MAD、其他。如果不满足以上字符串，则将全局搜索）
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetCollectCharactersById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_characters.go?s=2183:2261#L96">SetCollectCharactersById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SetCollectCharactersById">¶</a>
+				
+				
+			</h2>
+			<pre>func SetCollectCharactersById(chrID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SetCollectCharactersById
+</p><ul>
+<li><p>@brief 为当前用户收藏角色。
+</p><p>API：/v0/characters/{character_id}/collect
+</p></li><li><p>@param
+</p><p>【chrID】：角色ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetCollectPersonsById">func <a href="http://localhost:6060/src/lite_bangumi_api/api_persons.go?s=2175:2250#L99">SetCollectPersonsById</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SetCollectPersonsById">¶</a>
+				
+				
+			</h2>
+			<pre>func SetCollectPersonsById(perID <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SetCollectPersonsById
+</p><ul>
+<li><p>@brief 为当前用户收藏人物。
+</p><p>API：/v0/persons/{person_id}/collect
+</p></li><li><p>@param
+</p><p>【perID】：人物ID。
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetIndices">func <a href="http://localhost:6060/src/lite_bangumi_api/api_indices.go?s=470:522#L21">SetIndices</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#SetIndices">¶</a>
+				
+				
+			</h2>
+			<pre>func SetIndices(client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) ([]<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>SetIndices
+</p><ul>
+<li><p>@brief 新建目录。
+</p><p>API：/v0/persons/{person_id}
+</p></li><li><p>@param
+【client】：http.Client对象。
+</p></li><li><p>@return 返回一个[]byte和一个err。
+</p></li><li><p>@retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
+</p></li></ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UpdateCollectionEpisodesInfo">func <a href="http://localhost:6060/src/lite_bangumi_api/api_collections.go?s=8308:8403#L332">UpdateCollectionEpisodesInfo</a>
+				<a class="permalink" href="http://localhost:6060/pkg/lite_bangumi_api/#UpdateCollectionEpisodesInfo">¶</a>
+				
+				
+			</h2>
+			<pre>func UpdateCollectionEpisodesInfo(epiID, requestBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, client *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Client">Client</a>) (<a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>UpdateCollectionEpisodesInfo
+</p><ul>
+<li><p>@brief 更新章节收藏信息。
+</p><p>API：/v0/users/-/collections/-/episodes/{episode_id}
+</p></li><li><p>@param 【epiID】：章节ID。
+</p><p>【requestBody】：请求体，格式如下：
+</p><p>{
+"type": 2
+}
+</p><p>【client】：http.Client对象。
+</p></li><li><p>@return 返回一个bool和一个err。
+</p></li><li><p>@retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
+</p></li></ul>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.20.14.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

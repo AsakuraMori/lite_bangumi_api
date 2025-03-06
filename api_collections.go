@@ -16,16 +16,28 @@ import (
 )
 
 /*
-*
+SearchCollectionsByUserName
+
   - @brief 获取用户收藏。
+
     API：/v0/users/{username}/collections
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【subjectTypeName】：条目类型（只能是以下字符串：书籍、动漫、音乐、游戏、三次元。如果不满足以上字符串，则会返回错误）
+
     【typeName】：收藏类型（只能是以下字符串：想看、看过、在看、搁置、抛弃。如果不满足以上字符串，则将全局搜索）
+
     【limit】：当前页面显示条目最大数量。
+
     【offset】：开始的条目位置。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCollectionsByUserName(userName, subjectTypeName, typeName, limit, offset string, client *http.Client) ([]byte, error) {
@@ -76,13 +88,22 @@ func SearchCollectionsByUserName(userName, subjectTypeName, typeName, limit, off
 }
 
 /*
-*
+SearchCollectionsByID
+
   - @brief 获取对应用户的收藏，查看私有收藏需要 access token。
+
     API：/v0/users/{username}/collections/{subject_id}
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【subID】：条目类ID
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCollectionsByID(userName, subID string, client *http.Client) ([]byte, error) {
@@ -95,13 +116,20 @@ func SearchCollectionsByID(userName, subID string, client *http.Client) ([]byte,
 }
 
 /*
-*
+AddOrEditCollectionsSubjectsInUsersByID
+
   - @brief 修改条目收藏状态, 如果不存在则创建，如果存在则修改。
     由于直接修改剧集条目的完成度可能会引起意料之外效果，只能用于修改书籍类条目的完成度。
     方法的所有请求体字段均可选。
+
     API：/v0/users/-/collections/{subject_id}
-  - @param 【subID】：条目ID。
+
+  - @param
+
+    【subID】：条目ID。
+
     【requestBody】：请求体，格式如下：
+
     {
     "type": 3,
     "rate": 10,
@@ -113,8 +141,11 @@ func SearchCollectionsByID(userName, subID string, client *http.Client) ([]byte,
     "string"
     ]
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func AddOrEditCollectionsSubjectsInUsersByID(subID, requestBody string, client *http.Client) (bool, error) {
@@ -128,13 +159,20 @@ func AddOrEditCollectionsSubjectsInUsersByID(subID, requestBody string, client *
 }
 
 /*
-*
+EditCollectionsSubjectsInUsersByID
+
   - @brief 修改条目收藏状态。
     由于直接修改剧集条目的完成度可能会引起意料之外效果，只能用于修改书籍类条目的完成度。
     PATCH 方法的所有请求体字段均可选。
+
     API：/v0/users/-/collections/{subject_id}
-  - @param 【subID】：条目ID。
+
+  - @param
+
+    【subID】：条目ID。
+
     【requestBody】：请求体，格式如下：
+
     {
     "type": 3,
     "rate": 10,
@@ -146,8 +184,11 @@ func AddOrEditCollectionsSubjectsInUsersByID(subID, requestBody string, client *
     "string"
     ]
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func EditCollectionsSubjectsInUsersByID(subID, requestBody string, client *http.Client) (bool, error) {
@@ -160,15 +201,26 @@ func EditCollectionsSubjectsInUsersByID(subID, requestBody string, client *http.
 }
 
 /*
-*
+SearchUsersCollectionsEpisodesBySubjectsID
+
   - @brief 搜索章节收藏信息。
+
     API：/v0/users/-/collections/{subject_id}/episodes
-  - @param 【subID】：条目ID。
+
+  - @param
+
+    【subID】：条目ID。
+
     【limit】：当前页面显示条目最大数量。
+
     【offset】：开始的条目位置。
+
     【episodesType】：章节类型（只能是以下字符串：本篇、特别篇、OP、ED、预告/宣传/广告、MAD、其他。如果不满足以上字符串，则将全局搜索）
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchUsersCollectionsEpisodesBySubjectsID(subID, offset, limit, episodesType string, client *http.Client) ([]byte, error) {
@@ -205,11 +257,16 @@ func SearchUsersCollectionsEpisodesBySubjectsID(subID, offset, limit, episodesTy
 }
 
 /*
-*
+GetCollectionsSubjectsEpisodesInfo
+
   - @brief 章节收藏信息。同时会重新计算条目的完成度。
+
     API：/v0/users/-/collections/{subject_id}/episodes
+
   - @param 【subID】：条目ID。
+
     【requestBody】：请求体，格式如下：
+
     {
     "episode_id": [
     1,
@@ -219,8 +276,11 @@ func SearchUsersCollectionsEpisodesBySubjectsID(subID, offset, limit, episodesTy
     "type": 2
     ]
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func GetCollectionsSubjectsEpisodesInfo(subID, requestBody string, client *http.Client) (bool, error) {
@@ -233,12 +293,20 @@ func GetCollectionsSubjectsEpisodesInfo(subID, requestBody string, client *http.
 }
 
 /*
-*
+SearchCollectionsEpisodesInfo
+
   - @brief 获取章节收藏信息。
+
     API：/v0/users/-/collections/-/episodes/{episode_id}
-  - @param 【epiID】：章节ID。
+
+  - @param
+
+    【epiID】：章节ID。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCollectionsEpisodesInfo(epiID string, client *http.Client) ([]byte, error) {
@@ -251,16 +319,24 @@ func SearchCollectionsEpisodesInfo(epiID string, client *http.Client) ([]byte, e
 }
 
 /*
-*
+UpdateCollectionEpisodesInfo
+
   - @brief 更新章节收藏信息。
+
     API：/v0/users/-/collections/-/episodes/{episode_id}
+
   - @param 【epiID】：章节ID。
+
     【requestBody】：请求体，格式如下：
+
     {
     "type": 2
     }
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval 如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func UpdateCollectionEpisodesInfo(epiID, requestBody string, client *http.Client) (bool, error) {
@@ -273,12 +349,20 @@ func UpdateCollectionEpisodesInfo(epiID, requestBody string, client *http.Client
 }
 
 /*
-*
+SearchCharactersCollectionsByUserName
+
   - @brief 获取用户角色收藏列表。
+
     API：/v0/users/{username}/collections/-/characters
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCharactersCollectionsByUserName(userName string, client *http.Client) ([]byte, error) {
@@ -291,12 +375,20 @@ func SearchCharactersCollectionsByUserName(userName string, client *http.Client)
 }
 
 /*
-*
+SearchCharactersCollectionsByUserNameAndID
+
   - @brief 获取用户单个角色收藏信息。
+
     API：/v0/users/{username}/collections/-/characters/{character_id}
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCharactersCollectionsByUserNameAndID(userName, chrID string, client *http.Client) ([]byte, error) {
@@ -309,12 +401,20 @@ func SearchCharactersCollectionsByUserNameAndID(userName, chrID string, client *
 }
 
 /*
-*
+SearchPersonsCollectionsByUserName
+
   - @brief 获取用户人物收藏列表。
+
     API：/v0/users/{username}/collections/-/persons
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchPersonsCollectionsByUserName(userName string, client *http.Client) ([]byte, error) {
@@ -327,12 +427,20 @@ func SearchPersonsCollectionsByUserName(userName string, client *http.Client) ([
 }
 
 /*
-*
+SearchPersonsCollectionsByUserNameAndID
+
   - @brief 获取用户单个人物收藏信息。
+
     API：/v0/users/{username}/collections/-/persons/{person_id}
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchPersonsCollectionsByUserNameAndID(userName, perID string, client *http.Client) ([]byte, error) {

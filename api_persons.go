@@ -15,14 +15,20 @@ import (
 )
 
 /*
-*
+SearchPersonsByName
 
   - @brief 通过搜索人物名获取人物信息。
+
     API：/v0/search/persons
 
-  - @param 【limit】：当前页最大数量
+  - @param
+
+    【limit】：当前页最大数量
+
     【offset】：起始位置
+
     【requestBody】：请求体，结构如下：
+
     {
     "keyword": "string",
     "filter": {
@@ -32,6 +38,7 @@ import (
     ]
     }
     }
+
     【client】：http.Client对象。
 
   - @return 返回一个[]byte和一个err。
@@ -55,12 +62,20 @@ func SearchPersonsByName(limit, offset string, requestBody string, client *http.
 }
 
 /*
-*
+SearchPersonsById
+
   - @brief 通过搜索人物ID名获取ID信息。
+
     API：/v0/persons/{person_id}
-  - @param 【perID】：人物ID。
+
+  - @param
+
+    【perID】：人物ID。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchPersonsById(perID string, client *http.Client) ([]byte, error) {
@@ -75,12 +90,20 @@ func SearchPersonsById(perID string, client *http.Client) ([]byte, error) {
 }
 
 /*
-*
+SetCollectPersonsById
+
   - @brief 为当前用户收藏人物。
+
     API：/v0/persons/{person_id}/collect
-  - @param 【perID】：人物ID。
+
+  - @param
+
+    【perID】：人物ID。
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func SetCollectPersonsById(perID string, client *http.Client) (bool, error) {
@@ -95,12 +118,20 @@ func SetCollectPersonsById(perID string, client *http.Client) (bool, error) {
 }
 
 /*
-*
+DeleteCollectPersonsById
+
   - @brief 为当前用户取消收藏人物。
+
     API：/v0/persons/{person_id}/collect
-  - @param 【perID】：人物ID。
+
+  - @param
+
+    【perID】：人物ID。
+
     【client】：http.Client对象。
+
   - @return 返回一个bool和一个err。
+
   - @retval  如果bool为true，err为nil。如果bool为false，err表示错误信息
 */
 func DeleteCollectPersonsById(perID string, client *http.Client) (bool, error) {

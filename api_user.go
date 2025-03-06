@@ -14,12 +14,20 @@ import (
 )
 
 /*
-*
+SearchUserNameByName
+
   - @brief 通过搜索用户名获取用户信息。
+
     API：/v0/users/{username}
-  - @param 【userName】：用户名。
+
+  - @param
+
+    【userName】：用户名。
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchUserNameByName(userName string, client *http.Client) ([]byte, error) {
@@ -34,11 +42,18 @@ func SearchUserNameByName(userName string, client *http.Client) ([]byte, error) 
 }
 
 /*
-*
+GetMe
+
   - @brief 获取当前用户信息。
+
     API：/v0/me
-  - @param 无
+
+  - @param
+
+    【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func GetMe(client *http.Client) ([]byte, error) {

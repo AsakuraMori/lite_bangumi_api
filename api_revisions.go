@@ -15,14 +15,24 @@ import (
 )
 
 /*
-*
+SearchPersonsRevisionsById
+
   - @brief 获取人物ID的编辑历史。
+
     API：/v0/revisions/persons
-  - @param 【perID】：人物ID
+
+  - @param
+
+    【perID】：人物ID
+
     【limit】：当前页最大数
+
     【offset】：起始位置
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchPersonsRevisionsById(perID, limit, offset string, client *http.Client) ([]byte, error) {
@@ -40,12 +50,20 @@ func SearchPersonsRevisionsById(perID, limit, offset string, client *http.Client
 }
 
 /*
-*
+SearchPersonsRevisionsByRevisionsId
+
   - @brief 获取人物编辑历史ID内详细信息。
+
     API：/v0/revisions/persons/{revision_id}
-  - @param 【revID】：历史ID
+
+  - @param
+
+    【revID】：历史ID
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchPersonsRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error) {
@@ -60,14 +78,24 @@ func SearchPersonsRevisionsByRevisionsId(revID string, client *http.Client) ([]b
 }
 
 /*
-*
+SearchCharactersRevisionsById
+
   - @brief 获取角色ID的编辑历史。
+
     API：/v0/revisions/characters
-  - @param 【chrID】：角色ID
+
+  - @param
+
+    【chrID】：角色ID
+
     【limit】：当前页最大数
+
     【offset】：起始位置
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCharactersRevisionsById(chrID, limit, offset string, client *http.Client) ([]byte, error) {
@@ -86,12 +114,20 @@ func SearchCharactersRevisionsById(chrID, limit, offset string, client *http.Cli
 }
 
 /*
-*
+SearchCharactersRevisionsByRevisionsId
+
   - @brief 获取角色编辑历史ID内详细信息。
+
     API：/v0/revisions/characters/{revision_id}
-  - @param 【revID】：历史ID
+
+  - @param
+
+    【revID】：历史ID
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchCharactersRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error) {
@@ -106,14 +142,24 @@ func SearchCharactersRevisionsByRevisionsId(revID string, client *http.Client) (
 }
 
 /*
-*
+SearchSubjectsRevisionsById
+
   - @brief 获取条目ID的编辑历史。
+
     API：/v0/revisions/subjects
-  - @param 【subID】：条目ID
+
+  - @param
+
+    【subID】：条目ID
+
     【limit】：当前页最大数
+
     【offset】：起始位置
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchSubjectsRevisionsById(subID, limit, offset string, client *http.Client) ([]byte, error) {
@@ -132,12 +178,20 @@ func SearchSubjectsRevisionsById(subID, limit, offset string, client *http.Clien
 }
 
 /*
-*
+SearchSubjectsRevisionsByRevisionsId
+
   - @brief 获取条目编辑历史ID内详细信息。
+
     API：/v0/revisions/subjects/{revision_id}
-  - @param 【revID】：历史ID
+
+  - @param
+
+    【revID】：历史ID
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchSubjectsRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error) {
@@ -152,14 +206,24 @@ func SearchSubjectsRevisionsByRevisionsId(revID string, client *http.Client) ([]
 }
 
 /*
-*
+SearchEpisodesRevisionsById
+
   - @brief 获取章节ID的编辑历史。
+
     API：/v0/revisions/episodes
-  - @param 【epiID】：章节ID
+
+  - @param
+
+    【epiID】：章节ID
+
     【limit】：当前页最大数
+
     【offset】：起始位置
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchEpisodesRevisionsById(epiID, limit, offset string, client *http.Client) ([]byte, error) {
@@ -178,12 +242,20 @@ func SearchEpisodesRevisionsById(epiID, limit, offset string, client *http.Clien
 }
 
 /*
-*
+SearchEpisodesRevisionsByRevisionsId
+
   - @brief 获取章节编辑历史ID内详细信息。
+
     API：/v0/revisions/episodes/{revision_id}
-  - @param 【revID】：历史ID
+
+  - @param
+
+    【revID】：历史ID
+
     【client】：http.Client对象。
+
   - @return 返回一个[]byte和一个err。
+
   - @retval []byte是返回体，err表示错误。如果err为nil，则没有错误。
 */
 func SearchEpisodesRevisionsByRevisionsId(revID string, client *http.Client) ([]byte, error) {
